@@ -1,0 +1,123 @@
+:root {
+    --color-green: 75 94% 57%;
+    --color-white: 0 0% 100%;
+    --color-grey: 0 0% 20%;
+    --color-dark-grey: 0 0% 12%;
+    --color-off-black: 0 0% 8%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font: unset;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px 'Inter', sans-serif;
+    background-color: hsl(var(--color-off-black));
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: hsl(var(--color-white));
+    background-color: hsl(var(--color-dark-grey));
+    border-radius: 16px;
+    padding: 1rem;
+    width: min(90%, 450px);
+}
+
+main {
+    padding-inline: 2rem;
+
+    >img {
+        scale: 0.5;
+        border-radius: 50%;
+        margin-bottom: -1rem;
+    }
+
+    >h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    >h2 {
+        margin-top: 0.5rem;
+        color: hsl(var(--color-green));
+        font-weight: 500;
+    }
+
+    >p {
+        margin-block: 1.5rem 1rem;
+    }
+}
+
+.button-list {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    width: 100%;
+
+    >button {
+        background-color: hsl(var(--color-grey));
+        color: inherit;
+        font: inherit;
+        font-weight: 600;
+        border-radius: 6px;
+        border: unset;
+        padding: 0.75rem;
+        cursor: pointer;
+
+        &:focus-within {
+            background-color: hsl(var(--color-green));
+            color: hsl(var(--color-off-black));
+        }
+
+        @media (min-width: 768px) {
+            &:hover,
+            &:focus {
+                background-color: hsl(var(--color-green));
+                color: hsl(var(--color-off-black));
+            }
+        }
+    }
+}
+
+.attribution {
+    font: 12px 'Inter', sans-serif;
+    padding-top: 0.75rem;
+    font-weight: 600;
+
+    >a {
+        color: hsl(var(--color-green));
+        text-decoration: none;
+
+
+        @media (min-width: 768px) {
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
