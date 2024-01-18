@@ -39,7 +39,7 @@ main {
     background-color: hsl(var(--color-dark-grey));
     border-radius: 16px;
     padding: 1rem;
-    width: min(90%, 450px);
+    width: min(90%, 400px);
 }
 
 main {
